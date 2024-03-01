@@ -1,0 +1,180 @@
+:root{
+    --blueColor:#10cab7;
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: "Work Sans", sans-serif;
+}
+
+header{
+    background-color: aliceblue;
+    height: 40px;
+}
+.container{
+    margin: auto;
+    background-color: #eee;
+    padding: 0 12px;
+}
+
+header .container{
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    width: 60px;
+}
+
+header .links{
+    position: relative;
+}
+
+.container .links .icons{
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 25px;
+    top: 10px;
+    gap: 4px;
+    
+}
+
+.container .links .icons span:first-child{
+    height: 2px;
+    width: 100%;
+    background-color: black;
+}
+
+.icons span:nth-child(2){
+    width: 50%;
+    height: 2px;
+    background-color:black;
+    transition: 0.3s;
+}
+.container .links .icons span:last-child{
+    height: 2px;
+    background-color: black;
+    width: 100%;
+    margin-bottom: 15px;
+
+}
+
+
+.container .links:hover span:nth-child(2){
+    width: 100%;
+    
+}
+
+
+
+.links ul{
+    margin: 0;
+    padding: 0;
+    background-color: #F6F6F6;
+    position: absolute;
+    right: 0;
+    width: 200px;
+    list-style: none;
+    top: calc(100% + 12px);
+    display: none;
+    border-radius: 10px;
+    z-index: 44;
+}
+
+
+
+.links ul::before{
+    content: " ";
+    content: " ";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #F6F6F6 transparent;
+    position: absolute;
+    right: 6px;
+    top: -20px;
+}
+.container .links:hover ul{
+    display: block;
+}
+
+ul li a{
+    display:block;
+    color: #6f6F6F;
+    text-decoration: none;
+    padding: 15px;
+    margin: 10px;
+    transition: .3s;
+}
+
+ul li:hover a{
+    margin-left: 25px;
+}
+
+ul li:not(:last-child) a{
+    border-bottom: 1px solid #DDD;
+}
+
+
+
+/* ================landing  page style ============ */
+
+.landing{
+    background-image: url(../images/pexels-pixabay-355747.jpg);
+    background-size:cover;
+    height: calc(100vh - 40px);
+    position: relative;
+}
+
+.landing .intro-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width: 413px;
+    max-width: 100%;
+
+}
+.intro-text h1{
+    color: var(--blueColor);
+    font-weight: bold;
+    font-size: 50px;
+
+}
+.intro-text p{
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #000000;
+    font-weight: 800;
+
+}
+
+
+
+
+
+
+
+
+
+@media(min-width:768px){
+    .container{
+        width: 750px;
+    }
+}
+@media(min-width:992px){
+    .container{
+        width: 970px;
+    }
+}
+@media(min-width:1200px){
+    .container{
+        width: 1170px;
+    }
+}
