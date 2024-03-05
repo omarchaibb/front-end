@@ -1,5 +1,7 @@
 :root{
     --blueColor:#10cab7;
+    --secondary-color:#2c4755;
+    --section-background:#f6f6f6;
 }
 
 *{
@@ -15,7 +17,6 @@ header{
 }
 .container{
     margin: auto;
-    background-color: #eee;
     padding: 0 12px;
 }
 
@@ -155,9 +156,128 @@ ul li:not(:last-child) a{
 
 }
 
+/* ====================fearchers style start ==================== */
+.feachers{
+    background-color: var(--section-background);
+    padding: 60px 0;
+}
+.feachers .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-template-rows: 3fr;
+    gap: 20px;
+}
+
+.feachers .feat{
+    text-align: center;
+    padding: 20px;
+}
+.feat i{
+    color: var(--blueColor);
+}
+
+.feat h3{
+    font-weight: 800;
+    margin:30px 0;
+}
+.feat p{
+    line-height: 1.6;
+    color: #777;
+    font-size: 17px;
+}
+/* ====================fearchers style end==================== */
+/* =============Start component ========== */
+
+.special-heading{
+    color: #ebeced;
+    font-size: 100px;
+    font-weight: 800;
+    letter-spacing: -5px;
+    text-align: center;
+    margin: 0;
+}
+.special-heading + p{
+    text-align: center;
+    margin: -30px 0 0;
+    font-size: 20px;
+    color: #797979;
+}
+
+@media (max-width:767px){
+    .special-heading{
+        font-size: 60px;
+    }
+    .special-heading + p{
+        margin-top: -20px;
+    padding: 0 119px;
+    font-size: 17px;
+}
+
+}
+/* ============= end compent========== */
+/* =================Services star================ */
+.services-content{
+    display: grid;
+    margin-top:100px;
+    gap: 30Px;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+} 
+
+.srv{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+@media (max-width:767px){
+    .srv{
+        flex-direction: column;
+        text-align: center;
+    }
+}
 
 
+.services-content .srv i{
+    color: var(--blueColor);
+    flex-basis: 60px;
+}
 
+.srv .text{
+    flex: 1;
+}
+
+.text h3{
+    margin: 0 0 20px;
+}
+.text p{
+    color: #444;
+    font-weight: 300;
+    line-height: 1.6;
+}
+.image{
+    text-align: center;
+    position: relative;
+}
+
+.image::before{
+    content: "";
+    background-color: var(--secondary-color);
+    position: absolute;
+    width: 100px;
+    height: calc(100% + 100px);
+    top: -50px;
+    right: 0;
+    z-index: -1;
+}
+
+.image img{
+    width: 260px;
+}
+@media (max-width:1199px){
+    .image-column{
+        display: none;
+    }
+}
+/* =================Services end================ */
 
 
 
