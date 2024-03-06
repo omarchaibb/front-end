@@ -2,10 +2,16 @@
     --blueColor:#10cab7;
     --secondary-color:#2c4755;
     --section-background:#f6f6f6;
+    --paragraphe-color:#777;
 }
 
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
 }
 body{
     font-family: "Work Sans", sans-serif;
@@ -216,6 +222,9 @@ ul li:not(:last-child) a{
 }
 /* ============= end compent========== */
 /* =================Services star================ */
+.services{
+    padding: 60px 0;
+}
 .services-content{
     display: grid;
     margin-top:100px;
@@ -278,9 +287,188 @@ ul li:not(:last-child) a{
     }
 }
 /* =================Services end================ */
+/* =================portfolio start===========  */
+.portfolio{
+    background-color: var(--section-background);
+    padding: 60px 0;
+}
+
+.portfolio-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 30px;
+    margin-top: 80px;
+}
+.card{
+    border-radius: 20px;
+    background-color: white;
+}
+.card img{
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+}
+.info{
+    padding: 15px;
+}
+
+.info p{
+    color: var(--paragraphe-color);
+}
+
+
+@media (max-width:767px){
+    .info{
+        text-align: center;
+    }
+}
+/* =================portfolio end ===========  */
+
+/* ====================About start =============== */
+
+.about {
+    padding: 60px 0;
+}
+.about .about-content {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@media (max-width:991px){
+    .about .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .image2{
+        margin: 0px auto 60px;
+    }
+}
+
+.about .about-content .image2 {
+    position: relative;
+    width: 250px;
+    height: 375px;
+}
+
+.about .about-content .image2::before {
+    content: "";
+    position: absolute;
+    background-color: #ebeced;
+    width: 100px;
+    height: calc(100% + 80px);
+    top: -40px;
+    left: -20px;
+    z-index: -1;
+}
+.about .about-content .image2::after{
+    content: "";
+    width: 120px;
+    height: 300px;
+    position: absolute;
+    top: -40px;
+    border-bottom: var(--blueColor) solid 80px;
+    border-left: solid 80px var(--blueColor);
+    right: -144px;
+    z-index: -1;
+}
+
+@media (max-width:991px) {
+    .image2::before,.image2::after{
+        display: none;
+    }
+}
+
+
+.about .about-content .image2 img {
+    max-width: 100%;
+}
+.about .about-content .about-paragraphe {
+    flex-basis: calc(100% - 500px);
+}
+
+
+.about-paragraphe p:first-of-type {
+    font-weight: bold;
+    line-height: 2;
+    margin-bottom: 50px;
+}
+.about-paragraphe hr {
+    width: 50%;
+    display: inline-block;
+    border-color: var(--blueColor);
+}
+.about-paragraphe p:last-of-type {
+    line-height: 2;
+    color: #777;
+}
+
+.contact{
+    background-color: var(--section-background);
+    padding: 80px 0;
+}
+
+.contact-content{
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-content h4{
+    font-size: 35px;
+    font-weight: 800;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.contact-content a{
+    display: block;
+    font-size: 35px;
+    font-weight: 800;
+    color: var(--blueColor);
+    text-decoration: none;
+
+}
+
+.social-network{
+    margin-top: 20px;
+}
+.social-network i{
+    color: var(--secondary-color);
+    margin-left: 5px;
+}
+
+
+@media (max-width:767px) {
+    .contact-content a{
+        font-size: 20px;
+    }
+    .contact-content h4{
+        font-size: 25px;
+    }
+}
 
 
 
+/* ====================About end =============== */
+
+/* ======================footer start ================= */
+
+footer{
+    letter-spacing: 1.8;
+    font-size: 18px;
+    color: white;
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 30px;
+}
+footer span{
+    color: var(--blueColor);
+    font-size: 18px;
+    font-weight: 700;
+}
+/* ======================footer end ================= */
 
 
 @media(min-width:768px){
